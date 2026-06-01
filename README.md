@@ -1,1 +1,745 @@
-# 6m4plates
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6M4 PLATES | Premium 3D Gel & 4D Laser Number Plates</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts for Premium Interface Elements -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Exact UK Plate Structural Character Proportions with absolute line wrapping protection */
+        .font-uk-plate {
+            font-family: 'Oswald', 'Impact', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            word-spacing: 0.55em;
+            white-space: nowrap; 
+            display: inline-block;
+        }
+
+        .carbon-bg {
+            background-color: #060709;
+            background-image: linear-gradient(45deg, #0d0f14 25%, transparent 25%), 
+                              linear-gradient(-45deg, #0d0f14 25%, transparent 25%), 
+                              linear-gradient(45deg, transparent 75%, #0d0f14 75%), 
+                              linear-gradient(-45deg, transparent 75%, #0d0f14 75%);
+            background-size: 6px 6px;
+        }
+        
+        .plate-shadow {
+            box-shadow: 0 35px 70px -15px rgba(0, 0, 0, 0.95), 0 0 40px rgba(0, 0, 0, 0.5);
+        }
+        
+        html {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .nav-link {
+            transition: color 0.2s ease-in-out;
+        }
+
+        /* ----------------------------------------------------
+           ULTRA-REALISTIC STACKED 3D/4D TEXT DEPTH ENGINE
+         ---------------------------------------------------- */
+        .style-2d {
+            color: #0c0e12;
+            text-shadow: none;
+            filter: none;
+        }
+        
+        .style-3d-gel {
+            color: #050505;
+            text-shadow: 
+                0px -1px 0px #000000,
+                0px 1px 1px rgba(255, 255, 255, 0.3),
+                1px 1px 1px #000000,
+                2px 2px 2px rgba(0, 0, 0, 0.6),
+                3px 4px 4px rgba(0, 0, 0, 0.5);
+            filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.7));
+        }
+        
+        .style-4d-3mm {
+            color: #07080a;
+            text-shadow: 
+                0.5px 0.5px 0px #000000,
+                1px 1px 0px #030304,
+                1.5px 1.5px 0px #0a0a0d,
+                2px 2px 0px #111115,
+                2.5px 2.5px 0px #18181f,
+                3px 3px 0px #1f1f26,
+                3px 3.5px 1px rgba(0, 0, 0, 0.7),
+                4px 5px 6px rgba(0, 0, 0, 0.6);
+        }
+        
+        .style-4d-5mm {
+            color: #020203;
+            text-shadow: 
+                0.5px 0.5px 0px #000000,
+                1px 1px 0px #030304,
+                1.5px 1.5px 0px #08080a,
+                2px 2px 0px #0f0f12,
+                2.5px 2.5px 0px #15151a,
+                3px 3px 0px #1c1c22,
+                3.5px 3.5px 0px #22222a,
+                4px 4px 0px #282831,
+                4.5px 4.5px 0px #2e2e38,
+                5px 5px 0px #33333f,
+                5px 5.5px 1px rgba(0, 0, 0, 0.8),
+                6px 8px 8px rgba(0, 0, 0, 0.7);
+        }
+        
+        .style-4d-double {
+            color: #050506;
+            text-shadow: 
+                0.5px 0.5px 0px #000000,
+                1px 1px 0px #050506,
+                1.5px 1.5px 0px #0c0c0f,
+                2px 2px 0px #121217,
+                2.5px 2.5px 0px #1a1a20,
+                0px -0.5px 1px rgba(255, 255, 255, 0.25),
+                3px 4px 4px rgba(0, 0, 0, 0.65);
+        }
+
+        .glare-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, 0.15) 48%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.15) 52%, transparent 65%);
+            background-size: 200% 100%;
+            background-position: 150% 0;
+            transition: background-position 0.12s ease-out;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="carbon-bg text-gray-100 antialiased selection:bg-amber-500 selection:text-black">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 text-center py-2 px-4 text-xs font-bold uppercase tracking-widest border-b border-amber-400 z-50 relative">
+        <i class="fa-solid fa-truck-fast mr-1.5 animate-pulse"></i> Next Day Tracked UK Shipping Available On All Orders Placed Before 2PM
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/90 border-b border-slate-900 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-black tracking-tighter text-slate-950 bg-gradient-to-r from-amber-400 to-amber-500 px-3 py-1.5 rounded border border-amber-300 shadow-lg shadow-amber-500/10 font-mono">6M4 PLATES</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-xs font-bold tracking-widest uppercase">
+                <a href="#configurator" id="nav-configurator" class="nav-link text-amber-400 hover:text-amber-300 flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping"></span>Plate Builder
+                </a>
+                <a href="#styles" id="nav-styles" class="nav-link text-gray-400 hover:text-white">Styles</a>
+                <a href="#pricing" id="nav-pricing" class="nav-link text-gray-400 hover:text-white">Pricing</a>
+                <a href="#faqs" id="nav-faqs" class="nav-link text-gray-400 hover:text-white">Legal & FAQ</a>
+            </nav>
+            <div>
+                <a href="#configurator" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-5 py-2.5 rounded text-xs transition shadow-lg shadow-amber-500/20 uppercase tracking-widest border border-amber-400">Design Plate</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 1: Plate Builder Split Container -->
+    <section id="configurator" class="relative py-12 lg:py-16 overflow-hidden scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-10 space-y-3">
+                <span class="inline-flex items-center gap-1.5 py-1 px-2.5 rounded bg-slate-900 text-[10px] font-bold text-amber-400 border border-slate-800 uppercase tracking-widest">
+                    <i class="fa-solid fa-shield-halved text-amber-500"></i> DVLA Registered Supplier RNPS
+                </span>
+                <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight uppercase">
+                    Bespoke <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">Automotive Styling</span>
+                </h1>
+                <p class="text-sm text-gray-400 max-w-xl mx-auto">
+                    Design your bespoke premium registration layout configuration. Real-time visual mapping engine engineered with laser cut accuracy and premium grade component modeling.
+                </p>
+            </div>
+
+            <!-- Master Grid Block (Left Studio / Right Form) -->
+            <div class="grid lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- LEFT SIDE: Studio Stage and Dynamic Descriptions -->
+                <div class="lg:col-span-7 bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6 space-y-6 sticky top-24 backdrop-blur shadow-2xl">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-gray-400"><i class="fa-solid fa-eye text-amber-500 mr-1.5"></i> Custom Interactive Stage</span>
+                        <!-- Front/Rear Toggle Switches -->
+                        <div class="flex bg-slate-950 p-1 rounded border border-slate-800 text-[10px] font-bold uppercase tracking-wider">
+                            <button type="button" id="toggle-front" class="px-3 py-1 rounded text-gray-400 transition">Front (White)</button>
+                            <button type="button" id="toggle-rear" class="px-3 py-1 rounded bg-amber-500 text-slate-950 transition">Rear (Yellow)</button>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Plate 3D Stage Visualizer Outer Box -->
+                    <div id="plate-stage" class="flex flex-col items-center justify-center py-16 bg-slate-950 rounded-xl border border-slate-900/60 relative overflow-hidden group cursor-crosshair">
+                        <!-- Premium Number Plate Body Matrix -->
+                        <div id="plate-body" class="w-full max-w-lg bg-gradient-to-b from-amber-400 to-amber-500 rounded border-[3px] border-slate-950 plate-shadow flex flex-col justify-between items-center relative py-6 px-6 aspect-[52/11] transition-all duration-300 overflow-hidden select-none">
+                            <!-- Authentic Inner Legal Border Line Overlay -->
+                            <div class="absolute inset-1 border border-slate-950/25 rounded pointer-events-none"></div>
+                            <!-- Glare Reflection Layer -->
+                            <div id="glare" class="glare-overlay"></div>
+                            <!-- Bottom Data Stamp Obligations -->
+                            <div id="stamp-left" class="absolute bottom-1 left-4 text-[5px] tracking-widest text-slate-950/60 uppercase font-mono font-bold pointer-events-none transition-opacity duration-200">6M4 PLATES BSAU145e</div>
+                            <div id="stamp-right" class="absolute bottom-1 right-4 text-[5px] tracking-widest text-slate-950/60 uppercase font-mono font-bold pointer-events-none transition-opacity duration-200">6M4 LTD CR0</div>
+                            <!-- Clean Default Brand Placeholder Text Applied Here -->
+                            <div id="preview-text" class="text-5xl sm:text-6xl font-black uppercase font-uk-plate text-center my-auto transition-all duration-150 style-4d-3mm select-none">
+                                6M4 PLTS
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Spec Display Badges -->
+                    <div class="grid grid-cols-3 gap-3 text-center">
+                        <div class="p-3 bg-slate-950/60 rounded-lg border border-slate-800/60">
+                            <span class="text-[9px] block text-gray-500 uppercase font-bold tracking-wider mb-0.5">Active Style</span>
+                            <span id="badge-style" class="text-[10px] font-black uppercase text-amber-400 tracking-wide">4D 3mm Laser</span>
+                        </div>
+                        <div class="p-3 bg-slate-950/60 rounded-lg border border-slate-800/60">
+                            <span class="text-[9px] block text-gray-500 uppercase font-bold tracking-wider mb-0.5">Sizing Specs</span>
+                            <span id="badge-size" class="text-[10px] font-black uppercase text-gray-300 tracking-wide">Standard Oblong</span>
+                        </div>
+                        <div class="p-3 bg-slate-950/60 rounded-lg border border-slate-800/60">
+                            <span class="text-[9px] block text-gray-500 uppercase font-bold tracking-wider mb-0.5">UK Legal Status</span>
+                            <span id="badge-legal" class="text-[10px] font-black uppercase text-emerald-400 tracking-wide"><i class="fa-solid fa-circle-check mr-1"></i> 100% Legal</span>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Information Panel Descriptions -->
+                    <div class="border-t border-slate-800/80 pt-6 mt-4 space-y-5 text-sm bg-slate-950/40 p-6 rounded-xl border border-slate-800/40">
+                        <div>
+                            <h4 id="info-heading-1" class="font-extrabold text-white text-base tracking-wide uppercase">Enhance The Look Of Your Vehicle</h4>
+                            <p id="info-text-1" class="text-xs text-gray-400 mt-1.5 leading-relaxed">
+                                <strong class="text-white font-bold">4D 3mm Laser Cut Acrylic</strong> variants represent the perfect balance of aggressive stance and industrial precision. Every character is cut from high-gloss solid premium black acrylic sheets using hyper-focused laser paths, ensuring perfectly squared, razor-sharp edges. Unlike cheap plastic imitations, these stand a full 3mm proud from the reflective backing layer, catching ambient light profiles perfectly and casting a sharp structural silhouette across your bumpers. They are highly favored for German performance applications and modern sports vehicle overhauls.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-extrabold text-white text-base tracking-wide uppercase">Stand Out From The Crowd!</h4>
+                            <p class="text-xs text-gray-400 mt-1.5 leading-relaxed">
+                                Everyone's got the same old "boring" flat number plates that come pre-fitted from the dealership factory link. Break away from standard baseline configurations and give your car the high-profile custom styling accent it deserves. Join an exclusive community of thousands of premium motorists across the UK nationwide who choose 6M4 LTD craftsmanship to overhaul their vehicle presentation markers. <strong class="text-amber-400 font-bold uppercase tracking-wider">Be Distinctive!</strong>
+                            </p>
+                        </div>
+                        <div>
+                            <h4 id="info-heading-2" class="font-extrabold text-white text-base tracking-wide uppercase">What Will I Receive With This Order?</h4>
+                            <p id="info-text-2" class="text-xs text-gray-400 mt-1.5 leading-relaxed">
+                                Every standard pairing selection delivers a completely matched set of front and rear physical custom plates hand-assembled to order specifications. Built using the highest optical-grade cast sheets, premium zero-fade retroreflective sheets, and premium industrial bonding compounds designed to easily survive rigorous pressure-washing and severe UK winter weathering matrices.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT SIDE: Order Build Settings Form Area -->
+                <div class="lg:col-span-5 bg-slate-900 border border-slate-800/80 rounded-2xl p-6 shadow-2xl">
+                    <div class="border-b border-slate-800 pb-3 mb-6">
+                        <h3 class="text-sm font-bold uppercase tracking-widest text-amber-400">Configure Options</h3>
+                    </div>
+
+                    <form name="order-inquiry" method="POST" data-netlify="true" class="space-y-5">
+                        <input type="hidden" id="style" name="style" value="4d-3mm">
+                        <input type="hidden" id="legal-type" name="legal-type" value="road-legal">
+
+                        <div>
+                            <label for="reg" class="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1.5">1. Enter Registration</label>
+                            <!-- Cleared default text down to clean placeholder pattern -->
+                            <input type="text" id="reg" name="reg" placeholder="E.G.  AB12 CDE" required class="w-full bg-slate-950 border border-slate-800 rounded p-3 text-white focus:outline-none focus:border-amber-500 font-mono text-base uppercase tracking-widest transition shadow-inner">
+                        </div>
+
+                        <!-- Individual Style Selector Grid Boxes with Integrated Image Preview Windows -->
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">2. Choose Character Style Profile</label>
+                            <div class="grid grid-cols-2 gap-3">
+                                
+                                <!-- Box 1: 4D 3mm -->
+                                <div id="box-4d-3mm" class="style-box border-2 border-amber-500 bg-slate-950 rounded-xl cursor-pointer hover:bg-slate-900 transition flex flex-col overflow-hidden h-36">
+                                    <div class="w-full h-20 bg-slate-900 relative bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=300&q=80');">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent"></div>
+                                    </div>
+                                    <div class="p-2.5 flex flex-col justify-between flex-grow">
+                                        <span class="text-[11px] font-black text-white block truncate">4D 3mm Laser</span>
+                                        <span class="text-[9px] text-amber-400 font-mono">Solid Acrylic</span>
+                                    </div>
+                                </div>
+
+                                <!-- Box 2: 4D 5mm -->
+                                <div id="box-4d-5mm" class="style-box border-2 border-slate-800 bg-slate-950/40 rounded-xl cursor-pointer hover:bg-slate-900 transition flex flex-col overflow-hidden h-36">
+                                    <div class="w-full h-20 bg-slate-900 relative bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=300&q=80');">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 options to-transparent"></div>
+                                    </div>
+                                    <div class="p-2.5 flex flex-col justify-between flex-grow">
+                                        <span class="text-[11px] font-black text-white block truncate">4D 5mm Laser</span>
+                                        <span class="text-[9px] text-gray-500 font-mono">Maximum Stance</span>
+                                    </div>
+                                </div>
+
+                                <!-- Box 3: 3D Gel -->
+                                <div id="box-3d-gel" class="style-box border-2 border-slate-800 bg-slate-950/40 rounded-xl cursor-pointer hover:bg-slate-900 transition flex flex-col overflow-hidden h-36">
+                                    <div class="w-full h-20 bg-slate-900 relative bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=300&q=80');">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent"></div>
+                                    </div>
+                                    <div class="p-2.5 flex flex-col justify-between flex-grow">
+                                        <span class="text-[11px] font-black text-white block truncate">3D Gel Domed</span>
+                                        <span class="text-[9px] text-gray-500 font-mono">High-Gloss Resin</span>
+                                    </div>
+                                </div>
+
+                                <!-- Box 4: 4D Double Layer -->
+                                <div id="box-4d-double" class="style-box border-2 border-slate-800 bg-slate-950/40 rounded-xl cursor-pointer hover:bg-slate-900 transition flex flex-col overflow-hidden h-36">
+                                    <div class="w-full h-20 bg-slate-900 relative bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=300&q=80');">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent"></div>
+                                    </div>
+                                    <div class="p-2.5 flex flex-col justify-between flex-grow">
+                                        <span class="text-[11px] font-black text-white block truncate">4D Double Layer</span>
+                                        <span class="text-[9px] text-gray-500 font-mono">Laser + Gel Top</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <!-- Box 5: Full-Width 2D Baseline -->
+                            <div id="box-2d-flat" class="style-box border-2 border-slate-800 bg-slate-950/40 p-3 rounded-xl cursor-pointer hover:bg-slate-900 transition mt-3 flex justify-between items-center h-12">
+                                <span class="text-xs font-black text-white">Standard Flat 2D Printed</span>
+                                <span class="text-[10px] text-gray-500 font-mono">MOT Baseline</span>
+                            </div>
+                        </div>
+
+                        <!-- Compliance Frame Selection -->
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">3. Specification Frame Compliance</label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div id="type-legal" class="type-box border-2 border-amber-500 bg-slate-950 p-3 rounded-xl cursor-pointer hover:bg-slate-900 transition flex flex-col justify-between h-20">
+                                    <span class="text-xs font-black text-white block">100% Road Legal</span>
+                                    <span class="text-[9px] text-emerald-400 font-semibold"><i class="fa-solid fa-circle-check mr-1"></i> BSAU 145e Markings</span>
+                                </div>
+                                <div id="type-show" class="type-box border-2 border-slate-800 bg-slate-950/40 p-3 rounded-xl cursor-pointer hover:bg-slate-900 transition flex flex-col justify-between h-20">
+                                    <span class="text-xs font-black text-white block">Bespoke Show Plate</span>
+                                    <span class="text-[9px] text-amber-500 font-semibold"><i class="fa-solid fa-triangle-exclamation mr-1"></i> No Bottom Border Texts</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="size" class="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1.5">4. Plate Sizing Format</label>
+                            <select id="size" name="size" class="w-full bg-slate-950 border border-slate-800 rounded p-3 text-white focus:outline-none focus:border-amber-500 text-xs font-semibold transition">
+                                <option value="standard">Standard Oblong (520mm x 111mm)</option>
+                                <option value="short-16">Short Plate 16" (406mm x 111mm)</option>
+                                <option value="short-13">Short Plate 13" (330mm x 111mm)</option>
+                                <option value="lamborghini">Lamborghini Custom Hex Cut Profile</option>
+                            </select>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1.5">Your Name</label>
+                                <input type="text" id="name" name="name" required class="w-full bg-slate-950 border border-slate-800 rounded p-3 text-white focus:outline-none focus:border-amber-500 text-xs transition">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1.5">Email Address</label>
+                                <input type="email" id="email" name="email" required class="w-full bg-slate-950 border border-slate-800 rounded p-3 text-white focus:outline-none focus:border-amber-500 text-xs transition">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="notes" class="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-1.5">Special Assembly Instructions (Optional)</label>
+                            <textarea id="notes" name="notes" rows="2" placeholder="e.g. Tinted variants required, custom legal marker adjustments, fitting pads requests..." class="w-full bg-slate-950 border border-slate-800 rounded p-3 text-white focus:outline-none focus:border-amber-500 text-xs transition"></textarea>
+                        </div>
+
+                        <div class="pt-2">
+                            <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black py-4 rounded transition shadow-lg shadow-amber-500/20 uppercase tracking-widest text-xs border border-amber-400">
+                                Secure Build Summary Submission
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Styles Showcase -->
+    <section id="styles" class="py-16 bg-slate-950 border-t border-b border-slate-900/60 scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-2xl font-black text-white uppercase tracking-tight">Premium Build Variants</h2>
+                <p class="text-xs text-gray-400 mt-1">We source the highest optical-grade cast sheets and zero-fade alignment resins.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 space-y-4">
+                    <div class="text-amber-400 font-mono font-black text-xl">3D GEL</div>
+                    <h3 class="text-base font-bold text-white uppercase tracking-wide">High-Gloss Domed Gel</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Coated in split-resistant premium polyurethane resin. Soft rounded edges with intense deep-black reflection depth markers.</p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 space-y-4">
+                    <div class="text-amber-400 font-mono font-black text-xl">4D LASER</div>
+                    <h3 class="text-base font-bold text-white uppercase tracking-wide">Sharp Acrylic Cut profiles</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Precision laser cut using thick, high-impact solid premium acrylic profiles. Perfectly crisp, industrial clean lines.</p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 space-y-4">
+                    <div class="text-amber-400 font-mono font-black text-xl">5mm METRIC</div>
+                    <h3 class="text-base font-bold text-white uppercase tracking-wide">Extreme 5mm Pro Profile</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Ultra-thick, maximum depth block character sets. Designed for maximum standout profile contrast on high-performance builds.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Pricing Table -->
+    <section id="pricing" class="py-16 scroll-mt-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl font-black text-white uppercase tracking-tight">Transparent Pricing Matrix</h2>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-2xl">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="bg-slate-950 border-b border-slate-800 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                                <th class="py-4 px-6">Style Configuration</th>
+                                <th class="py-4 px-6">Specification Profile</th>
+                                <th class="py-4 px-6 text-right">Price (Pair)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-xs font-medium divide-y divide-slate-800/60">
+                            <tr>
+                                <td class="py-4 px-6 text-white font-bold">Standard 2D Baseline</td>
+                                <td class="py-4 px-6 text-gray-400">Reflective backings, completely flat design layer</td>
+                                <td class="py-4 px-6 text-right font-black text-amber-400 text-sm">£25.00</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-6 text-white font-bold">3D Premium Gel Domed</td>
+                                <td class="py-4 px-6 text-gray-400">High-Gloss flexible domed polyurethane resins</td>
+                                <td class="py-4 px-6 text-right font-black text-amber-400 text-sm">£45.00</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-6 text-white font-bold">4D Laser Cut (3mm)</td>
+                                <td class="py-4 px-6 text-gray-400">High-impact solid cut pristine acrylic plates</td>
+                                <td class="py-4 px-6 text-right font-black text-amber-400 text-sm">£50.00</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-6 text-white font-bold">4D Premium Laser (5mm)</td>
+                                <td class="py-4 px-6 text-gray-400">Thick line stance profile cuts for aggressive styling</td>
+                                <td class="py-4 px-6 text-right font-black text-amber-400 text-sm">£60.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Legal FAQ -->
+    <section id="faqs" class="py-16 bg-slate-950 scroll-mt-24">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl font-black text-white uppercase tracking-tight">Legal & MOT Compliance Guidelines</h2>
+                <p class="text-xs text-gray-400 mt-1">Everything you need to know about purchasing road-legal custom styling components safely.</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-2">
+                    <h3 class="text-sm font-bold text-white uppercase tracking-wide flex items-center gap-2">
+                        <i class="fa-solid fa-circle-question text-amber-500"></i> Are 3D Gel and 4D Laser cut plates completely road-legal?
+                    </h3>
+                    <p class="text-xs text-gray-400 leading-relaxed pl-5">
+                        Yes, completely. Current DVLA guidelines explicitly state that characters can be raised 3D profiles, provided they use the standard Charles Wright font spacing matrices and are solid black without two-tone color backing modifications. All our road configurations match BS AU 145e provisions flawlessly.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-2">
+                    <h3 class="text-sm font-bold text-white uppercase tracking-wide flex items-center gap-2">
+                        <i class="fa-solid fa-circle-question text-amber-500"></i> What verification documents are required?
+                    </h3>
+                    <p class="text-xs text-gray-400 leading-relaxed pl-5">
+                        To fulfill a road-legal registration build as a certified RNPS supplier, we must review 1 form of identification (e.g. driving license, passport) and 1 form of vehicle entitlement entitlement check (e.g. V5C logbook, V750 retention certificate). Our validation team coordinates these check drops securely via email right after form review submission routing.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-2">
+                    <h3 class="text-sm font-bold text-white uppercase tracking-wide flex items-center gap-2">
+                        <i class="fa-solid fa-circle-question text-amber-500"></i> What is the difference between Road-Legal and Show Plate options?
+                    </h3>
+                    <p class="text-xs text-gray-400 leading-relaxed pl-5">
+                        By law, all configurations intended to enter public highways must feature your supplier name and legal standard code mark (`BSAU 145e`) stamped at the baseline bottom margin. If you select our "Bespoke Show Plate" layout option, we completely strip away all legal stamps from the frame structure, leaving a completely clean blank backing surface. Show plate configurations are strictly manufactured for off-road showcase events, private property use, and automotive showroom photography displays only.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer System Data Marks -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-10 text-center text-[10px] text-gray-500 space-y-2">
+        <div class="max-w-7xl mx-auto px-4 tracking-widest font-medium">
+            <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">6M4 LTD</p>
+            <p>Registered Supplier Reference Markings Available on Official Inspection Checkpoints.</p>
+            <p>&copy; 2026 6M4 PLATES. All Product Build Specifications Managed under strict compliance frameworks.</p>
+        </div>
+    </footer>
+
+    <!-- Script Engine -->
+    <script>
+        const inputField = document.getElementById('reg');
+        const previewText = document.getElementById('preview-text');
+        const hiddenStyleInput = document.getElementById('style');
+        const hiddenLegalInput = document.getElementById('legal-type');
+        const sizeSelect = document.getElementById('size');
+        const plateBody = document.getElementById('plate-body');
+        const plateStage = document.getElementById('plate-stage');
+        const glare = document.getElementById('glare');
+
+        // Legal stamps blocks
+        const stampLeft = document.getElementById('stamp-left');
+        const stampRight = document.getElementById('stamp-right');
+
+        // Dynamic Info Elements
+        const infoHeading1 = document.getElementById('info-heading-1');
+        const infoText1 = document.getElementById('info-text-1');
+        const infoHeading2 = document.getElementById('info-heading-2');
+        const infoText2 = document.getElementById('info-text-2');
+
+        // Target Info Badges
+        const badgeStyle = document.getElementById('badge-style');
+        const badgeSize = document.getElementById('badge-size');
+        const badgeLegal = document.getElementById('badge-legal');
+
+        // Front/Rear Toggles
+        const toggleFront = document.getElementById('toggle-front');
+        const toggleRear = document.getElementById('toggle-rear');
+
+        const styleInfoData = {
+            '4d-3mm': {
+                name: '4D 3mm Laser',
+                h1: 'Enhance The Look Of Your Vehicle',
+                t1: '<strong class="text-white font-bold">4D 3mm Laser Cut Acrylic</strong> variants represent the perfect balance of aggressive stance and industrial precision. Every character is cut from high-gloss solid premium black acrylic sheets using hyper-focused laser paths, ensuring perfectly squared, razor-sharp edges. Unlike cheap plastic imitations, these stand a full 3mm proud from the reflective backing layer, catching ambient light profiles perfectly and casting a sharp structural silhouette across your bumpers. They are highly favored for German performance applications and modern sports vehicle overhauls.',
+                h2: 'What Will I Receive With This Order?',
+                t2: 'Every standard pairing selection delivers a completely matched set of front and rear physical custom plates hand-assembled to order specifications. Built using the highest optical-grade cast sheets, premium zero-fade retroreflective sheets, and premium industrial bonding compounds.'
+            },
+            '4d-5mm': {
+                name: '4D 5mm Laser',
+                h1: 'Maximum Stance Depth Profile Stature',
+                t1: '<strong class="text-white font-bold">4D 5mm Laser Cut Acrylic</strong> components are the ultimate bold statement profile for high-performance builds. Extruding a massive 5mm from the reflective baseline, these ultra-thick, raw structural characters provide unmatched architectural depth and dimensional contrast. Specifically modeled for performance cars, track builds, and wide-body stance profiles where standard plates completely wash out and lose definition. The walls are cut crisp to avoid rounding, maintaining a severe block-like stance.',
+                h2: 'What Will I Receive With This Order?',
+                t2: 'Your bundle includes a completely matched pair of extreme 5mm high-impact solid acrylic plates, built using ultra-resilient backing polymers engineered to easily withstand heavy automated car washes, tracking grit, and extreme weathering parameters.'
+            },
+            '3d-gel': {
+                name: '3D Gel Domed',
+                h1: 'Sleek High-Gloss Domed Polyurethane Presentation',
+                t1: '<strong class="text-white font-bold">3D Gel Domed</strong> configurations offer a glossy, high-end luxury shape layer onto your vehicle! Hand-layered using specialized, split-resistant polyurethane self-healing resins, these characters feature a smooth rounded crown that refracts ambient sunlight and overhead street lamps beautifully. Although smooth to the touch, it adds a distinct three-dimensional depth layer that subtly overhauls your bumper lines without being overly aggressive.',
+                h2: 'What Will I Receive With This Order?',
+                t2: 'Includes a complete pair of custom flexible domed resin plates. Built with zero-fade adhesive seals that guarantee the text will never cloud, crack, or experience edge lift under rigorous high-pressure washing loops.'
+            },
+            '4d-double': {
+                name: 'Double Layer Gel',
+                h1: 'The Pinnacle Multi-Dimensional Style Combo',
+                t1: '<strong class="text-white font-bold">4D Double Layer Gel</strong> plates represent the ultimate premium tier of custom vehicle manufacturing. We stack a highly defined 3D curved domed gel top cap directly on top of a sharp, razor-cut 4D solid black acrylic base platform. This hybrid multi-layer structure provides unparalleled multi-angle definition, combining the crisp squared silhouette of laser cuts with the high-gloss fluid shine of domed resin tracking components.',
+                h2: 'What Will I Receive With This Order?',
+                t2: 'Every order delivers a highly specialized custom pairing assembled using high-precision optical alignment techniques, ensuring completely clean, bubble-free adhesion margins across all backing materials.'
+            },
+            '2d-flat': {
+                name: 'Standard Flat 2D',
+                h1: 'Clean MOT Compliant Baseline Plates',
+                t1: '<strong class="text-white font-bold">Standard 2D Printed</strong> plates offer a clean, ultra-legible, traditional flat layout using our premium zero-fade retroreflective backing substrate sheets. Free from dimensional elevations, this option provides a pristine factory-original look optimized for standard daily tracking repairs, classic restorations, or clean baseline automotive presentation criteria.',
+                h2: 'What Will I Receive With This Order?',
+                t2: 'Delivers a matched pair of highly legible flat printed plates meeting all basic DVLA supplier criteria and solid black visibility standards, complete with premium waterproof anti-delamination backing seals.'
+            }
+        };
+
+        // 1. Live Text Formatting Engine with Dynamically Scaling Font Bounds
+        function updateRegPreview() {
+            let rawText = inputField.value.toUpperCase().replace(/\s+/g, '');
+            let formattedText = rawText;
+
+            if (rawText.length >= 5) {
+                formattedText = rawText.substring(0, rawText.length - 3) + ' ' + rawText.substring(rawText.length - 3);
+            }
+
+            // Fixed clean placeholder reset parameters
+            if (rawText.trim() === '') {
+                previewText.textContent = '6M4 PLTS';
+            } else {
+                previewText.textContent = formattedText;
+            }
+
+            const currentSize = sizeSelect.value;
+            if (currentSize === 'short-13') {
+                if (rawText.length >= 6) {
+                    previewText.style.fontSize = '2.25rem'; 
+                } else {
+                    previewText.style.fontSize = '2.75rem';
+                }
+            } else if (currentSize === 'short-16') {
+                if (rawText.length >= 7) {
+                    previewText.style.fontSize = '2.75rem';
+                } else {
+                    previewText.style.fontSize = '3.25rem';
+                }
+            } else {
+                previewText.style.fontSize = ''; 
+            }
+        }
+
+        inputField.addEventListener('input', updateRegPreview);
+
+        // 2. Individual Box Style Handler
+        function registerStyleBoxClick(boxId, valueString, cssClassName) {
+            const element = document.getElementById(boxId);
+            element.addEventListener('click', function() {
+                document.querySelectorAll('.style-box').forEach(box => {
+                    box.classList.remove('border-amber-500', 'bg-slate-950');
+                    box.classList.add('border-slate-800', 'bg-slate-950/40');
+                    const subLabel = box.querySelector('span:nth-child(2)');
+                    if (subLabel) { subLabel.classList.replace('text-amber-400', 'text-gray-500'); }
+                });
+
+                element.classList.remove('border-slate-800', 'bg-slate-950/40');
+                element.classList.add('border-amber-500', 'bg-slate-950');
+                const label = element.querySelector('span:nth-child(2)');
+                if (label) { label.classList.replace('text-gray-500', 'text-amber-400'); }
+
+                hiddenStyleInput.value = valueString;
+
+                previewText.classList.remove('style-2d', 'style-3d-gel', 'style-4d-3mm', 'style-4d-5mm', 'style-4d-double');
+                previewText.classList.add(cssClassName);
+
+                badgeStyle.textContent = styleInfoData[valueString].name;
+
+                infoHeading1.textContent = styleInfoData[valueString].h1;
+                infoText1.innerHTML = styleInfoData[valueString].t1;
+                infoHeading2.textContent = styleInfoData[valueString].h2;
+                infoText2.textContent = styleInfoData[valueString].t2;
+            });
+        }
+
+        registerStyleBoxClick('box-4d-3mm', '4d-3mm', 'style-4d-3mm');
+        registerStyleBoxClick('box-4d-5mm', '4d-5mm', 'style-4d-5mm');
+        registerStyleBoxClick('box-3d-gel', '3d-gel', 'style-3d-gel');
+        registerStyleBoxClick('box-4d-double', '4d-double', 'style-4d-double');
+        registerStyleBoxClick('box-2d-flat', '2d-flat', 'style-2d');
+
+        // Road Legal vs Show Plate Toggles
+        const typeLegalBtn = document.getElementById('type-legal');
+        const typeShowBtn = document.getElementById('type-show');
+
+        typeLegalBtn.addEventListener('click', function() {
+            typeLegalBtn.classList.remove('border-slate-800', 'bg-slate-950/40');
+            typeLegalBtn.classList.add('border-amber-500', 'bg-slate-950');
+            typeShowBtn.classList.remove('border-amber-500', 'bg-slate-950');
+            typeShowBtn.classList.add('border-slate-800', 'bg-slate-950/40');
+            
+            hiddenLegalInput.value = "road-legal";
+            stampLeft.style.opacity = "1";
+            stampRight.style.opacity = "1";
+            
+            badgeLegal.textContent = "100% Legal";
+            badgeLegal.className = "text-[10px] font-black uppercase text-emerald-400 tracking-wide";
+        });
+
+        typeShowBtn.addEventListener('click', function() {
+            typeShowBtn.classList.remove('border-slate-800', 'bg-slate-950/40');
+            typeShowBtn.classList.add('border-amber-500', 'bg-slate-950');
+            typeLegalBtn.classList.remove('border-amber-500', 'bg-slate-950');
+            typeLegalBtn.classList.add('border-slate-800', 'bg-slate-950/40');
+            
+            hiddenLegalInput.value = "show-plate";
+            stampLeft.style.opacity = "0";
+            stampRight.style.opacity = "0";
+            
+            badgeLegal.textContent = "Off-Road Show Use Only";
+            badgeLegal.className = "text-[10px] font-black uppercase text-amber-500 tracking-wide";
+        });
+
+        // 3. Dynamic Sizing Layout Matrix
+        sizeSelect.addEventListener('change', function() {
+            plateBody.classList.remove('max-w-lg', 'max-w-md', 'max-w-sm');
+            
+            const val = sizeSelect.value;
+            if (val === 'standard') {
+                plateBody.classList.add('max-w-lg');
+                badgeSize.textContent = 'Standard Oblong';
+            } else if (val === 'short-16') {
+                plateBody.classList.add('max-w-md');
+                badgeSize.textContent = 'Short Plate 16"';
+            } else if (val === 'short-13') {
+                plateBody.classList.add('max-w-sm');
+                badgeSize.textContent = 'Short Plate 13"';
+            } else if (val === 'lamborghini') {
+                plateBody.classList.add('max-w-lg');
+                badgeSize.textContent = 'Hex Cut Profile';
+            }
+            updateRegPreview(); 
+        });
+
+        // 4. Front & Rear Color Palette Toggles
+        toggleFront.addEventListener('click', function() {
+            toggleFront.className = "px-3 py-1 rounded bg-white text-slate-950 transition";
+            toggleRear.className = "px-3 py-1 rounded text-gray-400 transition";
+            plateBody.className = plateBody.className.replace(/from-amber-450|to-amber-500|from-amber-400/g, '');
+            plateBody.classList.add('bg-gradient-to-b', 'from-gray-50', 'to-gray-200');
+        });
+
+        toggleRear.addEventListener('click', function() {
+            toggleRear.className = "px-3 py-1 rounded bg-amber-500 text-slate-950 transition";
+            toggleFront.className = "px-3 py-1 rounded text-gray-400 transition";
+            plateBody.className = plateBody.className.replace(/from-gray-50|to-gray-200/g, '');
+            plateBody.classList.add('bg-gradient-to-b', 'from-amber-400', 'to-amber-500');
+        });
+
+        // 5. Dynamic 3D Acrylic Mirror Glare Tracking Engine
+        plateStage.addEventListener('mousemove', function(e) {
+            const rect = plateStage.getBoundingClientRect();
+            const x = e.clientX - rect.left; 
+            const percentage = (x / rect.width) * 100;
+            glare.style.backgroundPosition = `${100 - (percentage * 1.5)}% 0`;
+        });
+
+        plateStage.addEventListener('mouseleave', function() {
+            glare.style.backgroundPosition = '150% 0';
+        });
+
+        // SCROLL SPY TRACKING ENGINE FOR NAVBAR LINKS
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = {
+            'configurator': document.getElementById('nav-configurator'),
+            'styles': document.getElementById('nav-styles'),
+            'pricing': document.getElementById('nav-pricing'),
+            'faqs': document.getElementById('nav-faqs')
+        };
+
+        window.addEventListener('scroll', () => {
+            let currentSectionId = 'configurator'; 
+            const scrollPosition = window.scrollY + 200; 
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+
+            Object.keys(navLinks).forEach(id => {
+                if (navLinks[id]) {
+                    if (id === currentSectionId) {
+                        navLinks[id].className = "nav-link text-amber-400 hover:text-amber-300 flex items-center gap-1.5";
+                        if (!navLinks[id].querySelector('.animate-ping')) {
+                            const ping = document.createElement('span');
+                            ping.className = "w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping";
+                            navLinks[id].insertBefore(ping, navLinks[id].firstChild);
+                        }
+                    } else {
+                        navLinks[id].className = "nav-link text-gray-400 hover:text-white";
+                        const existingPing = navLinks[id].querySelector('.animate-ping');
+                        if (existingPing) existingPing.remove();
+                    }
+                }
+            });
+        });
+
+        // Initialize size profiles
+        updateRegPreview();
+    </script>
+
+</body>
+</html>
